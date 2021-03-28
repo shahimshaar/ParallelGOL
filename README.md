@@ -1,3 +1,43 @@
 # ParallelGOL
 A paralellized simulation of Conway's Game of Life, implemented in C using minimum/optimal number of Pthreads.
+
+Conway's game of life is a no-player game where there is a grid of cells, each either alive or dead, and once the game is supplied with the first state for the grid and the number of rounds to play, the rules are what create the state for each round, not the player. Here are the rules for Conway's game of life according to Wikipedia:
+    1. Any live cell with two or three live neighbours survives for the next round.
+    2. Any dead cell with three live neighbours becomes a live cell.
+    3. All other live cells die in the next round. Similarly, all other dead cells stay dead.
+    4. 
 I wrote this code for my CS 309 Course at Knox College, the skeleton of this code was written by Professor David Bunde.
+
+When you run this program, it will ask for 6 input parameters in the following order:
+Number of rows, number of column, likelihood for drawing initial grid (the likelihood that each cell will begin alive or dead, this simulation begins with a random grid depending on the supplied likelihood, but can be easily adapted to hard-wire particular initial states), number of rounds to simulate, number of threads to use, and whether or not you want debugging outputs.
+
+For instance, if we want to simulate the game of life with 4 rows, 4 columns, a %100 likelihood that each initial cell is alive (full grid), 2 rounds, using 4 threads, with debugging outputs activated, we would start the program with the following:
+
+./main 4, 4, 1.0, 2, 4, y
+
+This input outputs the following:
+
+The initial state:
+
+XXXX
+XXXX
+XXXX
+XXXX
+
+Live count = 16
+
+X..X
+....
+....
+X..X
+
+Live count = 4
+
+....
+....
+....
+....
+
+Live count = 0
+
+As we can see, a fully populated initial grid completely dies off within 2 rounds of the game of life.
