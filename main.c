@@ -201,7 +201,7 @@ int main(int argc, char** argv)  {
  pthread_mutex_t lifeMutex= PTHREAD_MUTEX_INITIALIZER;
  pthread_cond_t cond_var_even = PTHREAD_COND_INITIALIZER;
  pthread_cond_t cond_var_odd = PTHREAD_COND_INITIALIZER;
- printf("The initial state: \n");
+ //printf("The initial state: \n");
  printBoard(firstBoard, argc, numRows, numCols);
  for(int e=0; e<numThreads; e++){
   int bound = numRows / numThreads;

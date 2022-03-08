@@ -17,28 +17,33 @@ For instance, if we want to simulate the game of life with 4 rows, 4 columns, a 
 
 This input outputs the following:
 
-The initial state: 
+The initial state:<br/>
 
-XXXX
-XXXX
-XXXX
-XXXX
-Live count = 16
--------------------
+XXXX<br/>
+XXXX<br/>
+XXXX<br/>
+XXXX<br/>
 
-X..X
-....
-....
-X..X
-Live count = 4
--------------------
+Live count = 16<br/>
 
-....
-....
-....
-....
-Live count = 0
--------------------
+-----------------------
 
+X..X<br/>
+....<br/>
+....<br/>
+X..X<br/>
+
+Live count = 4<br/>
+
+-----------------------
+
+....<br/>
+....<br/>
+....<br/>
+....<br/>
+
+Live count = 0<br/>
+
+-----------------------
 
 As we can see, a fully populated initial grid completely dies off within 2 rounds of the game of life.
