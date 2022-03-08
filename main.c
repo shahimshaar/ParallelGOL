@@ -130,7 +130,6 @@ void printBoard(char** toPrint, int args, int numRows, int numCols){
        }
    } 
    printf("\n");
-   printf("\n");
    printf("Number of living cells %d", z);
    printf("\n");
    }
@@ -144,8 +143,9 @@ void printBoard(char** toPrint, int args, int numRows, int numCols){
        }
      } 
   printf("\n");
-  printf("\n");
   printf("Live count = %d", z);
+  printf("\n");
+  printf("-------------------");
   printf("\n");
  }
 }
